@@ -17,8 +17,8 @@ function getPlayerChoice(){
 }
 
 function rockPaperScissors(){
-    let computerChoice = toLowerCase(getComputerChoice());
-    let playerChoice = toLowerCase(getPlayerChoice());
+    let computerChoice = getComputerChoice().toLowerCase();
+    let playerChoice = getPlayerChoice().toLowerCase();
     if (computerChoice === "rock" && playerChoice === "scissors"){
         console.log("Computer wins.");
     }
@@ -29,6 +29,9 @@ function rockPaperScissors(){
         console.log("Computer wins.");
     }
     else if (computerChoice === "rock" && playerChoice==="paper"){
+        console.log("You win.");
+    }
+    else if (computerChoice=== "scissors" && playerChoice==="rock"){
         console.log("You win.");
     }
     else {
