@@ -1,3 +1,15 @@
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+const response = document.querySelector('#response');
+
+
+
+
+
+
+
+
 function getComputerChoice(){
     let num = Math.floor(Math.random() * 3);
     if (num===0){
@@ -11,10 +23,19 @@ function getComputerChoice(){
     }
 }
 
+
+
+
+
 function getPlayerChoice(){
     let userChoice = prompt("Rock, paper, scissors?");
     return userChoice;
 }
+
+
+
+
+
 
 function rockPaperScissors(){
     let computerChoice = getComputerChoice().toLowerCase();
