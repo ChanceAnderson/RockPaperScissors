@@ -1,11 +1,22 @@
-const rock = document.querySelector('#rock');
+const rock = document.querySelector("#rock");
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 const response = document.querySelector('#response');
 
+rock.addEventListener('click', () => {
+    const choice = "rock";
+    rockPaperScissors(choice);
+});
 
+paper.addEventListener('click', () => {
+    const choice = "paper";
+    rockPaperScissors(choice);
+});
 
-
+scissors.addEventListener('click', () => {
+    const choice = "scissors";
+    rockPaperScissors(choice);
+});
 
 
 
@@ -27,32 +38,31 @@ function getComputerChoice(){
 
 
 
-function getPlayerChoice(){
-    let userChoice = prompt("Rock, paper, scissors?");
-    return userChoice;
-}
+//function getPlayerChoice(){
+    //let userChoice = prompt("Rock, paper, scissors?");
+    //return userChoice;
+//}
 
 
 
 
 
 
-function rockPaperScissors(){
+function rockPaperScissors(choice){
     let computerChoice = getComputerChoice().toLowerCase();
-    let playerChoice = getPlayerChoice().toLowerCase();
-    if (computerChoice === "rock" && playerChoice === "scissors"){
+    if (computerChoice === "rock" && choice === "scissors"){
         console.log("Computer wins.");
     }
-    else if (computerChoice === "paper" && playerChoice === "scissors"){
+    else if (computerChoice === "paper" && choice === "scissors"){
         console.log("You win.");
     }
-    else if (computerChoice === "scissors" && playerChoice ==="paper"){
+    else if (computerChoice === "scissors" && choice === "paper"){
         console.log("Computer wins.");
     }
-    else if (computerChoice === "rock" && playerChoice==="paper"){
+    else if (computerChoice === "rock" && choice === "paper"){
         console.log("You win.");
     }
-    else if (computerChoice=== "scissors" && playerChoice==="rock"){
+    else if (computerChoice=== "scissors" && choice === "rock"){
         console.log("You win.");
     }
     else {
